@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+
+    <script>
+        /*
+
+         undefined 테스트
+         예제08: 존재하지 않는 객체의 프로퍼티에 접근하는 경우
+
+         */
+        
+        function Myclass(){
+            this.name ="seol";
+        }
+
+        var test1 = new Myclass();
+        alert("test1.name =" +test1.name);
+        alert("test1.userName = "+ test1.userName); //test1.userName = undefined
+        //존재하지 않은 변수를 접근하는 경우에도 undefind이 출력됨
+
+    </script>
+</head>
+
+<body>
+    test
+</body>
+</html>

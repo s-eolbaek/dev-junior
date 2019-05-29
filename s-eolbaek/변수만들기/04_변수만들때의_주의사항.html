@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Untitled Document</title>
+
+    <script>
+        /*
+        03. 변수이름 만들 때 주의사항
+		예제 : 변수 만들때 주의 사항 테스트.
+        */
+
+        // 1. 숫자로 시작하면 안되요.
+        var 1st =10; // 에러
+
+
+        // 2. 대소문자 구분 : name과 Name은 완전히 다른 변수랍니다.
+        var name ="서리짱";
+        var Name ="서리짱"; //두개의 창고가 만들어진것임
+        
+        // 3. 변수는 대문자가 아닌 소문자로 시작하세요.
+        var Name ="서리짱";
+        //대신
+        var name ="서리짱"; // 올바른 작성 (암묵적인 규칙)
+
+        // 4. 변하지 않는 환경 변수의 값을 담는 상수 변수는 모두 대문자로 만들어 주세요.
+
+        var DB_NAME = "Javaking";
+        
+        var ADMIN_ID ="SEOL";
+        // DB이름이나 고나리자 아이디처럼 한 번 저장한 후 변경하면 안되는 값은 모두 대문자로 작성
+        
+        
+        // 5. 여러 단어가 조합되는 경우 다음과 같이 낙타 표기법(camelcase)으로 작성해 주세요.
+        
+        var userName ="min";
+        
+        var selectMenuIndex =1;
+        
+
+        // 5. 문장과 세미콜론(문장뒤에 세미콜론 찍기)
+
+        
+        // 6. 자바스크립트에서 이미 정의된 예약어(키워드)를 사용하면 안돼요.
+        /*
+            예약어목록
+            
+            break, case, catch, continue, default, delete, do, else, finally, for, function, if, in, instanceof, 
+            new, return, switch, this, try, typeof, var, void, while, with
+        
+        
+        */
+        var class ="test1"; //에러
+        var for ="test2"; //에러
+
+    </script>
+</head>
+
+    <body> </body>
+</html>
