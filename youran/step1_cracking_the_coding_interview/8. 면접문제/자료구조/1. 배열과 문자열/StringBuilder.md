@@ -25,6 +25,7 @@ String joinWords(String][] words){
 ## 더 알아야 할 것
 - String과 StringBuilder 어떻게 작동되는지 더 자세히.
 - 직접 구현해보기
+- 아스키코드, 유니코드 등의 인코딩 포맷에 대해 조사
 
 ## references
 - [StringBuffer, StringBuilder 가 String 보다 성능이 좋은 이유와 원리](https://cjh5414.github.io/why-StringBuffer-and-StringBuilder-are-better-than-String/)
