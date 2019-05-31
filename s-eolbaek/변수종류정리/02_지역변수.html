@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title></title>
+
+        <script>
+            /*
+             예제 : 지역변수, 전역변수를 구분해주세요.
+
+             */
+
+            var globalV = "전역변수";
+
+            window.onload = function() {
+                var local1 = "지역변수"; //local1은 오직 onload() 함수영역에서만 사용가능
+            }
+            function func1() {
+                var local1 = "지역변수"; //onload()안에 있는 함수와 이름이 같더라도 다른 영역에서 만들어진
+                                        //변수이기 때문에 완전히 다른 변수이다.
+            }
+
+            function func2() {
+                document.write(globalV);
+            }
+            
+            /***********************************************************************************
+            참고도서 : 자바스크립트+jQuery 완전정복 스터디 1 - 기초편 : 웹 프론트엔드 개발자를 위한 필독서!
+            ************************************************************************************/
+        </script>
+    </head>
+
+    <body></body>
+</html>
