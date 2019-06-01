@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+
+    <script>
+        /*
+         예제 : 맴버 변수를 구분해주세요.
+
+         */
+
+        function MyClass() {
+            this.name = "멤버변수"; 
+        }
+
+
+        MyClass.prototype.showName = function() {//클래스에서 만들어 졌기때문에 멤버 함수(매서드)로 불린다.
+            document.write("name = ", this.name);
+        }
+        var objClass = new MyClass();
+        objClass.showName();
+        
+        
+        /*
+            멤버변수란?
+            멤버 변수는 클래스에서만들어지고 사용하기 때문에 멤버 변수로 불린다.
+        
+        */
+        
+
+        /***********************************************************************************
+        참고도서 : 자바스크립트+jQuery 완전정복 스터디 1 - 기초편 : 웹 프론트엔드 개발자를 위한 필독서!
+        ************************************************************************************/
+    </script>
+</head>
+
+<body> </body>
+</html>

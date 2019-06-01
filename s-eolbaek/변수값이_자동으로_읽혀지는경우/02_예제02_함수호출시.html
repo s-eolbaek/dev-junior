@@ -2,25 +2,31 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title></title>
+    <title>Untitled Document</title>
 
     <script>
         /*
 
-         undefined 테스트
-         예제06: 변수를 선언하고 그 변수에 값을 대입하지 않는 경우
-
+         예제02: 다음 구문이 어떻게 해석되는지 설명해 주세요.
          */
-        var data1;
-        alert("data1 =" +data1);
-        
-        // 변수를 선언 후 아무런 값을 넣지 않은 경우 변수에는 undefined라는 값이 기본적으로 저장됨
 
+        function test1(userName) {
+            alert("userName = " + userName);
+        }
+
+        var name = "ddandongne";
+        test1(name);
+        
+        /*
+            변수 name의 데이터가 복사되어 test1의 매개변수로 넘어간다.
+        */
+        
         /***********************************************************************************
         참고도서 : 자바스크립트+jQuery 완전정복 스터디 1 - 기초편 : 웹 프론트엔드 개발자를 위한 필독서!
         ************************************************************************************/
     </script>
 </head>
+
 <body>
     test
 </body>
