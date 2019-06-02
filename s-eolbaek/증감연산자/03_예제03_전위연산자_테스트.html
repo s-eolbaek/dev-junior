@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+
+    <script>
+        /*
+
+         예제03: 전위 연산자를 사용하는 경우 a와 b는 각각 몇이 저장되어 있을까요?
+
+         */
+
+        var a = 1;
+        var b = ++a;
+
+        document.write("a = " + a, " b=" + b);
+
+        /*
+        정답:
+            a = 2
+            b = 2
+
+
+         */
+        /*
+        전위 연산자에 대한 자바스크립트 엔진 해석 순서
+        
+        1) var a =1;
+        2) a = a+1;
+        3) var b= a;
+                
+        */
+        
+        /***********************************************************************************
+        참고도서 : 자바스크립트+jQuery 완전정복 스터디 1 - 기초편 : 웹 프론트엔드 개발자를 위한 필독서!
+        ************************************************************************************/
+
+    </script>
+</head>
+
+<body></body>
+</html>
