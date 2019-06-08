@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <script>
+        /*
+        미션 02 : 문자형으로 된 숫자값을 숫자형으로 변형해서 숫자연산을 할수 있게 만들어주세요.
+
+
+
+        */
+
+        var test="100.50";
+        var result =test+150+"20";
+        document.write("result = "+result);
+        document.write("<br>");
+        //1.
+        var test1="100.50";
+        var result1 =parseFloat(test1)+150+parseInt("20");
+        document.write("result1 = "+result1);
+        document.write("<br>");
+        //2. 
+        var test2="100.50";
+        var result2 =Number(test2)+150+Number("20");
+        document.write("result2 = "+result2);
+        
+        
+        /***********************************************************************************
+        참고도서 : 자바스크립트+jQuery 완전정복 스터디 1 - 기초편 : 웹 프론트엔드 개발자를 위한 필독서!
+        ************************************************************************************/
+
+    </script>
+</head>
+
+<body></body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title></title>
+
+    <style>
+        body {
+            font-size: 9pt;
+        }
+
+        .d-checkbox {
+            position: relative;
+            left: 100px;
+            top: 100px;
+        }
+
+        .d-checkbox .checkbox {
+            width: 20px;
+            height: 15px;
+            float: left;
+            background: url("resources/checkbox_uncheck.png") no-repeat;
+        }
+
+        .d-checkbox .checkbox.check {
+            background: url("resources/checkbox_check.png") no-repeat;
+        }
+
+    </style>
+
+    <script type="text/javascript"  src="../../../libs/jquery-1.11.0.min.js"></script>
+    <script>
+
+
+        $(document).ready(function() {
+
+            var $chk = $(".d-checkbox .checkbox");
+
+            $(".d-checkbox").click(function() {
+                // 소스를 여기에 입력해주세요.
+
+                // 클릭할때마다 현재 상태 값을 반전 시킴.
+
+            })
+        })
+
+    </script>
+</head>
+
+<body>
+    <div class="d-checkbox">
+        <div class="checkbox"> </div>
+        <div class="label">
+            체크박스-여기를 클릭해보세요.
+        </div>
+    </div>
+</body>
+</html>

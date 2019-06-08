@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <script>
+        /*
+
+         미션 04: 학점 구하기
+         이번 예제는 학점을 구하기 예제입니다. 하나의 평균 값을 입력받아 요구사항에 맞게 출력해주세요.
+
+         요구사항:
+         1. 학점은 다음과 같이 계산해주세요.
+             입력 값이 100~90이면 A학점
+             입력 값이 89~80이면 B학점
+             입력 값이 79~70이면 C학점
+             입력 값이 69~60이면 D학점
+             입력 값이 59~이면 F학점
+
+         2. 예를 들어 입력 값이 100이면 다음과 같이 출력해주세요.
+            100 점수의 점수의 학점은? A 입니다.
+
+
+         입력값 : 100
+            출력값 : "100 점수의  학점은? A 입니다."
+
+        */
+
+        // 1. 평균 점수 입력받기.
+        var value = window.prompt("평균 점수를 입력해주세요.");
+
+        // 2. 문자를 숫자로.
+        value =parseInt(value);
+
+        // 3. 학점 계산 후
+        // 4. 학점 출력
+        if(value>=90 && value<=100)
+            alert(value +"점수의 학점은? A입니다.");
+        else if(value>=80 && value<=89)
+            alert(value +"점수의 학점은? B입니다.");
+        else if(value>=70 && value<=79)
+            alert(value +"점수의 학점은? C입니다.");
+        else if(value>=60 && value<=69)
+            alert(value +"점수의 학점은? D입니다.");
+        else 
+            alert(value +"점수의 학점은? F입니다.");
+        /***********************************************************************************
+        참고도서 : 자바스크립트+jQuery 완전정복 스터디 1 - 기초편 : 웹 프론트엔드 개발자를 위한 필독서!
+        ************************************************************************************/
+    </script>
+</head>
+
+<body></body>
+</html>

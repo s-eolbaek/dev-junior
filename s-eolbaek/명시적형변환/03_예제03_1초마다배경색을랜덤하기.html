@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <script src="../../libs/jquery-1.11.0.min.js"></script>
+
+    <script>
+        /*
+         예제 03: 1초마다 한 번씩 배경색을 랜덤하게 변경해 주세요.
+
+         무작성 따라하기
+         */
+        $(document).ready(function(){
+            setInterval(function(){
+                var color = Math.random()*0xffffff; //0~ffffff 사이의 랜덤 색 만들기 ! 이때 결과는 10진수 실수
+                color = parseInt(color); // 실수를 정수로 변환
+                color = color.toString(16); // 정수를 16진수 문자로 변경
+                
+                $("body").css("background-color","#"+color); // 문자로 된 색상으로 최종 배경색 변경
+            },1000);
+        })
+        /***********************************************************************************
+        참고도서 : 자바스크립트+jQuery 완전정복 스터디 1 - 기초편 : 웹 프론트엔드 개발자를 위한 필독서!
+        ************************************************************************************/
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+</html>

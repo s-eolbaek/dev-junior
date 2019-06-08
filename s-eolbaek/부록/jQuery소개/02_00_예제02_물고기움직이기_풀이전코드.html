@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Untitled Document</title>
+        <style>
+            body {
+                font-size: 9pt;
+            }
+            #panel {
+                width: 600px;
+                height: 300px;
+                border: 1px solid #999;
+                position: relative;
+            }
+
+            #bar {
+                position: absolute;
+                left: 50px;
+                top: 190px;
+                width: 500px;
+                height: 20px;
+                background: #F30;
+            }
+
+            #fish {
+                position: absolute;
+                left: 50px;
+                top: 120px;
+            }
+
+            #nav {
+                text-align: center;
+                width: 600px;
+            }
+        </style>
+        <head>
+
+            <script src="../../libs/jquery-1.11.0.min.js"></script>
+            <script>
+            /*
+                예제01: 물고기를 현재 위치에서 430px 위치로 부드럽게 움직이도록 시작 버튼을 만들어주세요.
+             */
+
+            $(document).ready(function(){
+                //물고기 노드 구하기
+                var $fish = $("#fish");
+                
+                //버튼에 이벤트 걸기
+                $("#btnStart").click(function(){
+                    $fish.animate({
+                        left:"430px"
+                    },1000)
+                });
+            })
+                
+                
+                
+                
+        /***********************************************************************************
+        참고도서 : 자바스크립트+jQuery 완전정복 스터디 1 - 기초편 : 웹 프론트엔드 개발자를 위한 필독서!
+        ************************************************************************************/
+            </script>
+
+        </head>
+
+        <body>
+            <div id="panel">
+                <div id="bar"></div>
+                <img src="fish.png" id="fish">
+            </div>
+
+            <div id="nav">
+                <button id="btnStart">
+                    물고기 움직이기
+                </button>
+            </div>
+        </body>
+
+</html>

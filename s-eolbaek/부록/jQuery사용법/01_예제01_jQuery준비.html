@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+
+    <style>
+        body{
+            font-size:9pt;
+            font-family:"굴림";
+        }
+        div, p, ul, li{
+            border:1px #eeeeee solid;
+            margin:10px;
+        }
+        ul {
+            padding:10px;
+        }
+        li.select {
+            background-color:#ccc;
+        }
+    </style>
+    
+    <script src="../../libs/jquery-1.11.0.min.js"></script>
+    <script>
+        /*
+            예제01: jQuery 준비
+         */
+        $(document).ready(function(){
+            // 여기에 노드를 다루는 코드를 작성하면 됩니다.
+            alert("환영합니다.");
+
+        })
+        /***********************************************************************************
+        참고도서 : 자바스크립트+jQuery 완전정복 스터디 1 - 기초편 : 웹 프론트엔드 개발자를 위한 필독서!
+        ************************************************************************************/
+    </script>
+
+</head>
+
+<body>
+    <div>
+        jQuery를 이용한 노드 찾기
+    </div>
+    <p>
+        $()를 jQuery라고 생각하는 초보자도 있는데 사실 $()는 그냥 함수 호출일 뿐입니다. 함수 이름이 $인 함
+        수 호출인 것이죠. $() 함수의 역할은 선택자에 해당하는 노드를 찾아주는 역할을 합니다.
+    </p>
+
+    <div>
+        $() 함수에서 리턴해주는 값을 저장하기 위해 만든 변수입니다. 변수이름 앞에 $를 붙여준 이유는jQuery
+        기능이 들어있는 변수라는 것을 표현하기 위해서입니다. 그럼 이쯤에서 예제 하나를 만들어보죠.
+    </div>
+</body>
+</html>

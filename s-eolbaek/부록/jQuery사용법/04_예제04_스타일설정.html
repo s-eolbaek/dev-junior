@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <style>
+        #panel {
+            width:300px;
+            height:200px;
+            border:1px solid #000;
+            font-size:11px;
+        }
+    </style>
+    <script>
+
+
+
+    </script>
+    
+    <script src="../../libs/jquery-1.11.0.min.js"></script>
+    <script>
+        /*
+         예제 04: 확인 버튼(#btnCheck)을 클릭하면 패널(#panel)의 외각선(border)을
+         “4px solid #f00”으로 변경해주세요.
+         */
+        $(document).ready(function(){
+            $("#btnCheck").click(function(){
+               $("#panel").css("border","4px solid #f00"); 
+            });
+        //또는
+            $("#btnCheck").on("click",function(){
+               $("$panel").css("border","4px solid #f00"); 
+            });
+        })
+        
+        
+        
+        /***********************************************************************************
+        참고도서 : 자바스크립트+jQuery 완전정복 스터디 1 - 기초편 : 웹 프론트엔드 개발자를 위한 필독서!
+        ************************************************************************************/
+    </script>
+
+</head>
+
+<body>
+    <button id="btnCheck">확인</button>
+    <div id="panel">
+        초보자가 알아야 할 jQuery 핵심 기능: 스타일 설정하기
+
+    </div>
+
+</body>
+</html>

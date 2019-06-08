@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <style>
+
+    </style>
+    <script>
+
+
+
+    </script>
+    
+    <script src="../../libs/jquery-1.11.0.min.js"></script>
+    <script>
+        /*
+         예제 03: 확인 버튼을 클릭하면 “안녕하세요.” 메시지를 출력해 주세요.
+         */
+        $(document).ready(function(){
+            $("#btnCheck").on("click",function(){
+                alert("안녕하세요");
+            });
+            //또는
+            $("#btnCheck").click(function(){
+                alert("안녕하세요");
+            });
+        })
+        
+        /***********************************************************************************
+        참고도서 : 자바스크립트+jQuery 완전정복 스터디 1 - 기초편 : 웹 프론트엔드 개발자를 위한 필독서!
+        ************************************************************************************/
+    </script>
+
+</head>
+
+<body>
+    <button id="btnCheck">확인</button>
+</body>
+</html>

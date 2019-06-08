@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Untitled Document</title>
+<head>
+    <script src="../../libs/jquery-1.11.0.min.js"></script>
+    <script>
+        /*
+        jQuery란?
+        쉽고 빠르게 작업할 수 있게 도와주는 크로스 브라우징 라이브러리(특정 기능을 다양한 웹 브라우저에서 동일한 방법으로 사용할 수 있는 라이브러리)
+        
+        */
+        
+        /*
+         예제01 : 스크립트를 이용해 문서에서 #menu2의 li 태그 글자색을 모두 빨간색으로
+         변경하고 싶다면 어떻게 해야 할까요?
+         */
+        //자바스크립트 버전
+        window.onload=function(){
+            //먼저 #menu2를 찾는다.
+            var menu2=document.getElementById("menu2");
+            // #menu2의 태그 중 li태그를 찾는다
+            var liList=menu2.getElementsByTagName("li");
+            
+            
+            //li 태그에 하나씩 접근해 글자색을 변경한다.
+            for(var i = 0; i<liList.length;i++){
+                var li =liList[i];
+                li.style.color="#f00";
+            }
+        }
+        
+        //jQuery 사용 버전
+        $(document).ready(function(){
+            $("#menu2 li").css("color","#f00");
+        })
+        
+        //jQuery를 사용하면 훨씬 짧아진 코드로 처리할 수 있다.
+        
+        
+        /***********************************************************************************
+        참고도서 : 자바스크립트+jQuery 완전정복 스터디 1 - 기초편 : 웹 프론트엔드 개발자를 위한 필독서!
+        ************************************************************************************/
+    </script>
+
+</head>
+
+<body>
+    <div>
+        <p>이 문서는 jQuery를 사용하는 이유를 설명하기 위해 만든 예제 입니다. </p>
+        <p> 질문 : 스크립트를 이용해 문서에서 #menu2의 li 태그 스타일 속성 중 글자색을 모두 빨간색으로 변경해주세요.</p>
+    </div>
+    <ul class="menu" id="menu1">
+        <li>menu1-1</li>
+        <li>menu1-2</li>
+        <li>menu1-3</li>
+        <li>menu1-4</li>
+        <li>menu1-5</li>
+        <li>menu1-6</li>
+        <li>menu1-7</li>
+    </ul>
+    <ul class="menu" id="menu2">
+        <li>menu2-1</li>
+        <li>menu2-2</li>
+        <li>menu2-3</li>
+        <li>menu2-4</li>
+        <li>menu2-5</li>
+    </ul>
+</body>    
+</html>

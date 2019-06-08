@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <script>
+        /*
+        예제 01: 아래 내용을 조건부 연산자를 이용해서 간결하게 표현해주세요.
+        */
+        // 풀이 전 코드:
+         // 1. 값 입력.
+         var value = window.prompt("수를 입력해주세요. ");
+         // 2. 문자를 숫자로 변환.
+         value = parseInt(value);
+
+         // 3. 비교
+         if(value%2==0)
+            alert("짝수입니다.");
+         else
+            alert("홀수입니다.");
+
+        //조건부 연산자로 표현
+        (value%2==0) ? alert("짝수입니다.") : alert("홀수입니다.");
+        
+        /***********************************************************************************
+        참고도서 : 자바스크립트+jQuery 완전정복 스터디 1 - 기초편 : 웹 프론트엔드 개발자를 위한 필독서!
+        ************************************************************************************/
+    </script>
+</head>
+
+<body></body>
+</html>

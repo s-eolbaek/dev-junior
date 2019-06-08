@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <script>
+        /*
+
+         예제 01: 로그인 처리
+         사용자 아이디와 패스워드를 각각 입력받은 후
+         사용자 아이디가 ddandongne이고 패스워드가 1234인 경우에만 “환영합니다.”라는 메시지를 출력해주세요.
+         만약 사용자 아이디가 다른 경우 “사용자 아이디를 잘못 입력했습니다.”라고 메시지를 출력하고,
+         패스워드가 잘못된 경우 “패스워드를 잘못 입력했습니다.”라고 메시지를 출력해주세요.
+
+
+         */
+
+        // 풀이1
+        // 1. 값 입력.
+        var userID = window.prompt("사용자아이디는? ");
+        var userPW = window.prompt("사용자패스워드는?");
+
+        // 2. 값 비교.
+        if(userID=="ddandongne"&&userPW=="1234")
+            alert("환영합니다.");
+        else if(userID!="ddandongne")
+            alert("사용자 아이디를 잘못 입력했습니다.");
+        else
+            alert("패스워드를 잘못 입력했습니다.");
+        
+        
+        
+        /***********************************************************************************
+        참고도서 : 자바스크립트+jQuery 완전정복 스터디 1 - 기초편 : 웹 프론트엔드 개발자를 위한 필독서!
+        ************************************************************************************/
+    </script>
+</head>
+
+<body></body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <script>
+        /*
+         미션 02: 풀이 전 코드를 간단하게 만들어 주세요.
+        */
+        // 풀이 전 코드:
+         // 1. 마우스 버튼 입력받기.
+         var value = window.prompt("마우스 버튼을 눌러주세요(입력해주세요)", "왼쪽");
+
+         // 2, 비교처리.
+         if(value=="오른쪽")
+            document.write("오른쪽! 버튼을 눌렀군요!<br>");
+         else if(value=="왼쪽")
+            document.write("왼쪽! 버튼을 눌렀군요!<br>");
+         else if(value=="가운데")
+            document.write("가운데! 버튼을 눌렀군요!<br>");
+         else
+            document.write("도대체, 뭘 누른거죠?<br>");
+
+        //더 간단하게 만들기
+        if(value=="오른쪽"||value=="왼쪽"||value=="가운데")
+            document.write(value+"! 버튼을 눌렀군요!<br>");
+        else
+            document.write("도대체, 뭘 누른거죠?<br>");
+        /***********************************************************************************
+        참고도서 : 자바스크립트+jQuery 완전정복 스터디 1 - 기초편 : 웹 프론트엔드 개발자를 위한 필독서!
+        ************************************************************************************/
+
+    </script>
+</head>
+
+<body></body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <script>
+        /*
+         예제 01: 변수 test에 들어있는 문자 형으로 된 숫자 값을 숫자 형으로 변형해서 숫자 연산을 할 수 있게 만들어 주세요.
+         단, 소수 값은 버리고 오직 정수 값만을 저장해 주세요.
+         즉, 결과가 30010이 아닌310이 나오게 예제를 수정해주면 됩니다.
+        */
+
+         /*
+        // 풀이1 전
+        var test = "300.35";
+        var result = test + 10;
+        document.write("result = " + result);
+        */
+        
+        //풀이1 후
+        var test = "300";
+        var result = parseInt(test) + 10;
+        document.write("result = " + result);
+        
+        /*
+         변수 test에 들어있는 문자 형으로 된 숫자 값을 숫자 형으로 변형해서 숫자 연산을 할 수 있게 만들어 주세요.
+
+         */
+        
+        /*
+        // 풀이1 전
+        var test1 = "300";
+        var result1 = test1 + 10;
+        document.write("result1 = " + result1);
+        */
+        
+        // 풀이2 후
+        var test1 = "300.35";
+        var result1 = parseFloat(test1) + 10;
+        document.write("<br>result1 = " + result1);
+
+            /***********************************************************************************
+        참고도서 : 자바스크립트+jQuery 완전정복 스터디 1 - 기초편 : 웹 프론트엔드 개발자를 위한 필독서!
+        ************************************************************************************/
+    </script>
+</head>
+
+<body></body>
+</html>

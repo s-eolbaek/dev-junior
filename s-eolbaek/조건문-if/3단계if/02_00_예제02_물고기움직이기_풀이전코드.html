@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <style>
+        body {
+            font-size: 9pt;
+        }
+        #panel {
+            width: 600px;
+            height: 300px;
+            border: 1px solid #999;
+            position: relative;
+        }
+
+        #bar {
+            position: absolute;
+            left: 50px;
+            top: 190px;
+            width: 500px;
+            height: 20px;
+            background: #F30;
+        }
+
+        #img1 {
+            position: absolute;
+            left: 50px;
+            top: 120px;
+        }
+
+        #nav {
+            text-align: center;
+            width: 600px;
+        }
+    </style>
+
+    <script type="text/javascript"  src="../../libs/jquery-1.11.0.min.js"></script>
+    <script>
+        /*
+         예제 02: 물고기 움직이기
+         x(left)값을 입력받아 입력값이 0보다 같거가 크고 400보다 작거나 같은 경우 입력받은 위치만큼 물고기를 움직여주세요.
+         만약 0보다 작은 값이면 0”0보다 큰 값을 입력해주세요”라는 메시지를 출력하고
+         430보다 큰 값이면 “430보다 작은 값을 입력해주세요” 라는 메시지를 출력해주세요.
+
+         팁!
+            - $물고기를 움직이는 방법은 물고기.css("left", 위치값)를 해주면 된답니다.
+
+         */
+        $(document).ready(function() {
+
+            // 물고기 노드 구하기.
+            var $fish = $("#img1");
+
+            // 버튼에 이벤트 걸기.
+            $("#btn_start").click(function() {
+                var value = window.prompt("좌표값을 입력하세요",0);
+                value = parseInt(value);
+                if(value<0)
+                    alert("0보다 큰 값을 입력해주세요");
+                else if(value>430)
+                    alert("430보다 작은 값을 입력해주세요");
+                else 
+                    $fish.css("left",value);
+            });
+        })
+        
+        
+        
+        /***********************************************************************************
+        참고도서 : 자바스크립트+jQuery 완전정복 스터디 1 - 기초편 : 웹 프론트엔드 개발자를 위한 필독서!
+        ************************************************************************************/
+    </script>
+</head>
+
+<body>
+    <div>
+
+        <div id="panel">
+            <div id="bar"></div>
+            <div id="img1">
+                <img src="fish.png">
+            </div>
+        </div>
+        <div id="nav">
+            <button id="btn_start">
+                좌표값 입력받기
+            </button>
+
+        </div>
+    </div>
+</body>
+</html>

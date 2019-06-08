@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <style>
+        body {
+            font-size: 9pt;
+        }
+        #panel {
+            width: 600px;
+            height: 400px;
+            border: 1px solid #999;
+            position: relative;
+        }
+
+    
+
+        #fish {
+            position: absolute;
+            left: 50px;
+            top: 120px;
+        }
+
+        #nav {
+            text-align: center;
+            width: 600px;
+        }
+    </style>
+    <!--
+    미션 03: 물고기 움직이기
+    버튼을 누르면 x, y에 입력된 값만큼 물고기를 움직여주세요.
+    단, x값이 0~500, y는 0~300이 넘는 값이 입력되면  "입력된 값이 너무 큽니다. 다시 입력해주세요."
+    라고 출력해 주세요.
+
+
+    팁!
+       - 물고기를 움직이는 방법
+            $fish.css({
+                 left: x축 이동 위치 값,
+                 top: y축 이동 위치 값
+            });
+        
+        - 물고기 위치 입력 값 구하기
+            x축 위치 값 = parseInt($("#txtX").val());
+            y축 위치 값 = parseInt($("#txtY").val());
+
+    -->
+
+    <script type="text/javascript"  src="../../../libs/jquery-1.11.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            // 물고기 노드 구하기.
+            var $fish = $("#fish");
+
+            // 버튼에 클릭 이벤트 걸기.
+            $("#btnStart").click(function() {
+
+                // 1. 값 구하기
+                var x = parseInt($("#txtX").val());
+                var y = parseInt($("#txtY").val());
+
+               if((x>=0 && x<=500)&&(y>=0 && y<=300))
+                   $fish.css({
+                        left : x,
+                        top : y
+                    });
+                   
+                else 
+                    alert("입력 값이 너무 큽니다. 다시 입력해주세요");
+            });
+        })
+
+        /***********************************************************************************
+        참고도서 : 자바스크립트+jQuery 완전정복 스터디 1 - 기초편 : 웹 프론트엔드 개발자를 위한 필독서!
+        ************************************************************************************/
+    </script>
+</head>
+
+<body>
+    <div>
+
+        <div id="panel">
+            
+            <img src="fish.png" id="fish">
+        </div>
+
+        <div id="nav">
+            <label>x값 입력 : </label>
+            <input id="txtX"></input>
+            <br>
+            <label>y값 입력 : </label>
+            <input id="txtY">
+            </input>
+            <br>
+            <button id="btnStart">
+                물고기 움직이기
+            </button>
+
+        </div>
+    </div>
+</body>
+</html>

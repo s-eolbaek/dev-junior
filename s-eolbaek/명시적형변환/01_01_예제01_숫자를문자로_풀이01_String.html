@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <script>
+        /*
+        명시적 형변환 : 개발자가 자바스크립트를 이용해서 직접 어떤 형으로 바꿀지
+                    명시해 주는 것을 말함
+    
+        1. 문자를 숫자로 형변환 하는 방법
+        
+        1) parseInt(), Number() : 정수형으로 변환
+        2) parseFloat(), Number() : 실수형으로 변환
+        
+        2. 숫자를 문자로 형변환하는 방법
+        
+        1) String() : 일반문자형으로 변환
+        2) Number.toString() : 16진수 문자형으로 변환
+        3) Number.toFixed() : 실수 문자형으로 변환
+        
+        */
+        /*
+         예제01: 변수 test1에 들어있는 숫자 값을 문자로 변형해 주세요.
+         var test1 = 15;
+         */
+
+        // 풀이1: String()을 이용하는 방법
+        var test1 = 15;
+        var result = String(test1);
+        document.write("result = " + result);
+
+        /***********************************************************************************
+        참고도서 : 자바스크립트+jQuery 완전정복 스터디 1 - 기초편 : 웹 프론트엔드 개발자를 위한 필독서!
+        ************************************************************************************/
+    </script>
+</head>
+
+<body></body>
+</html>

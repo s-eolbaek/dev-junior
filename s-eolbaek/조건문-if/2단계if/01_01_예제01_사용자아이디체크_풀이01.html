@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <script>
+        /*
+
+         예제01: 사용자 아이디 하나를 입력받아 아이디가 “ddandongne”라면 “환영합니다.” 메시지를 출력하고,
+         그렇지 않은 경우 “운영자가 아닙니다.”라는 메시지를 출력해주세요.
+
+
+         */
+        // 풀이1
+        // 1. 값 입력.
+        var userID = window.prompt("사용자아이디는? ");
+
+        // 2. 값 비교.
+        if(userID=="ddandongne")
+            alert("환영합니다.");
+        else
+            alert("운영자가 아닙니다.");
+        
+        //또는
+        if(userID!="ddandongne")
+            alert("운영자가 아닙니다.");
+        else
+            alert("환영합니다.");
+        
+        
+        /***********************************************************************************
+        참고도서 : 자바스크립트+jQuery 완전정복 스터디 1 - 기초편 : 웹 프론트엔드 개발자를 위한 필독서!
+        ************************************************************************************/
+    </script>
+</head>
+
+<body></body>
+</html>
