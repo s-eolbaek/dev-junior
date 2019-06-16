@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <style>
+        body {
+            font-size: 9pt;
+        }
+
+        #panel {
+            width: 500px;
+            height: 500px;
+            border: 1px solid #999;
+            position: relative;
+        }
+
+        #fish {
+            position: absolute;
+            left: 50px;
+            top: 200px;
+        }
+
+    </style>
+
+   <!-- <script type="text/javascript"  src="../../../libs/jquery-1.11.0.min.js"></script>-->
+   <script type="text/javascript"  src="../../libs/jquery-1.11.0.min.js"></script>
+    <script>
+        /*
+
+         미션 03: switch를 활용한 물고기 움직이기
+         이번 미션 역시 앞에서 풀었던 물고기 움직이기 예제를 업그레이드한 내용입니다.
+
+         다음 요구사항에 맞게 만들어 주세요.
+
+         요구사항:
+             01. 초기 시작 위치: x(left) = 50, y(top) = 200
+             02. 왼쪽 화살표 버튼을 누르는 경우 왼쪽으로 -50만큼 이동
+             03. 오른쪽 화살표 버튼을 누르는 경우 오른쪽으로 +50만큼 이동
+             04. 위쪽 화살표 버튼을 누르는 경우 위쪽으로 -50만큼 이동
+             05. 아래쪽 화살표 버튼을 누르는 경우 아래쪽으로 +50만큼 이동
+             06. 단, 물고기가 움직이는 영역(#panel) 밖으로 넘어가면 안 됨
+
+         힌트:
+         키보드 다운 이벤트 등록하기
+             $(document).keydown(function(e){
+
+             });
+
+         키보드 입력 값 알아내기
+             $(document).keydown(function(e){
+             alert(“입력한 키 코드 값 = “+e.keyCode);
+             });
+
+         물고기 위치 움직이기
+             $fish.css({
+                 left: 물고기 X위치 값
+                 Top: 물고기 Y위치 값
+             })
+
+
+         */
+        $(document).ready(function() {
+            // 물고기 노드 구하기.
+            var $fish = $("#fish");
+            // 위치 초기화, 시작위치는 50, 200
+            var x = 50;
+            var y = 200;
+
+            // 키보드 다운 이벤트 리스너 등록
+            $(document).keydown(function(e) {
+                console.log("입력한 키 코드 값 = " + e.keyCode);
+
+                /*
+                 * 화살표 키에 따른 물고기 위치 움직이기
+                 * keyCode
+                 * 37 : 왼쪽 화살표
+                 * 39 : 오른쪽 화살표
+                 * 38 : 위쪽 화살표
+                 * 40 : 아래쪽 화살표
+                 */
+                
+            switch(e.keyCode){
+                    //왼쪽화살표
+                case 37 :
+                    x-=50;
+                    break;
+                //오른쪽화살표
+                case 39:
+                    x+=50;
+                    break;
+                //위쪽화살표
+                case 38:
+                    y-=50;
+                    break;
+                //아랫쪽화살표
+                case 40 :
+                    y+=50;
+                    break;
+            }
+            //물고기 유효값 처리
+                if(x<0)
+                    x=0;
+                if(x>500-120) //패널 너비 =500, 물고기 너비 = 120
+                    x=500-120;
+                if(y<0)
+                    y=0;
+                if(y>500-70) //패널 높이 =500, 물고기 높이 =70
+                    y=500-70;
+                    
+                console.log("물고기위치값",x,y); //물고기 이동위치확인
+                    
+            //물고기 이동시키기
+                    $fish.css({
+                    left :x,
+                    top :y
+                });
+            });
+        })
+
+    </script>
+
+</head>
+
+<body>
+<div id="panel">
+    <img src="fish.png" id="fish">
+</div>
+</body>
+</html>
+

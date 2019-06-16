@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <style>
+    </style>
+    <script>
+        /*
+         미션 01: switch를 활용한 간단한 계산기 만들기
+         switch문을 활용해 두 개의 수와 하나의 사칙연산자를 입력받아
+         계산 결과 값을 출력하는 간단한 계산기를 만들어 주세요.
+
+
+         */
+
+        var num1 = window.prompt("첫 번째 숫자 값을 입력 해주세요.");
+        var op = window.prompt("사칙연산자 중 하나를 입력해주세요.");
+        var num2 = window.prompt("두 번째 숫자 값을 입력 해주세요.");
+        var result = 0;
+        num1 = parseInt(num1);
+        num2 = parseInt(num2);
+        switch (op){
+            case "+" :
+                result = num1 + num2;
+                break;
+            case "-" :
+                result = num1 - num2;
+                break;
+            case "*" :
+                result = num1*num2;
+                break;
+            case "/" :
+                result = num1/num2;
+                break;
+            default :
+                result = "지원하지 않는 연산자 입니다.";
+        }
+        alert(num1+op+num2+"="+result);
+
+    </script>
+</head>
+
+<body>
+    <input type="text" id="txt1"
+</body>
+
+</html>

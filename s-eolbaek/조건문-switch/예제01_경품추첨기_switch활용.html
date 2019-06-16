@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title></title>
+
+    <script type="text/javascript"  src="../../libs/jquery-1.11.0.min.js"></script>
+    <script>
+        /*
+        예제01: if문으로 되어 있는 구문을 switch문으로 변경해 주세요.
+
+        */
+        var luckyValue = window.prompt("두근! 두근! 행운의 번호를 고르세요.");
+        /*if(luckyValue=="3")
+            document.write("당첨! 냉장고 ");
+        else if(luckyValue=="2")
+            document.write("당첨! 세탁기");
+        else if(luckyValue=="1")
+            document.write("당첨! TV");
+        else
+            document.write("꽝입니다.");
+*/
+        switch(luckyValue){
+            case "3" :
+                document.write("당첨! 냉장고 ");
+                break;
+            case "2" :
+                document.write("당첨! 세탁기");
+                break;
+            case "1" :
+                document.write("당첨! TV");
+                break;
+            default :
+                document.write("꽝입니다.");
+               }
+        /*
+        switch문은 다중처리를 할 때 좀더 깔끔하고 읽기 쉬운 코드로 작성할 수 있다.
+        if문의 경우 else if가 많이 생기면 다소 복잡해진다.
+        
+        case의 실행구문이 실행된 후 break;구문이 없다면 계쏙해서 다음 case 내용이 실행된다.
+        case의 실행구문이 한번 실행되면 break;를 만나기 전까지는 멈추지 않는다는 점을 기억해라.
+        
+        
+        if와 switch의 차이점
+        if의 내용을 모두 switch로 변경할 수 없다.
+        왜냐면 비교연산자의 경우는 switch에서 사용할 수 없기 때문이다.
+        if 구문 중 조건식이 특정 값과 일치는 경우(==)만 switch로 변경할 수 있다.
+        
+        
+        */
+        
+        /***********************************************************************************
+        참고도서 : 자바스크립트+jQuery 완전정복 스터디 1 - 기초편 : 웹 프론트엔드 개발자를 위한 필독서!
+        ************************************************************************************/
+
+    </script>
+</head>
+
+<body>
+
+</body>
+</html>
